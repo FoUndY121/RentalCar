@@ -1,54 +1,49 @@
-/* Сброс стилей (Reset CSS) */
+.container {
+  width: 1440px;
+  margin: 0 auto;
+  padding-left: 120px;
+  padding-right: 120px;
+}
+:root {
+  --main: #101828;
+  --gray: #8d929a;
+  --gray-light: #dadde1;
+  --badges: #f2f4f7;
+  --inputs: #f7f7f7;
+  --white: #fff;
+  --button: #3470ff;
+  --button-hover: #0b44cd;
+}
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
 }
-
-html,
-body {
-  height: 100%;
-  font-family: sans-serif;
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-img,
-picture,
-video,
-canvas,
-svg {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-
-input,
-button,
-textarea,
-select {
-  font: inherit;
-  background: none;
-  border: none;
-  outline: none;
-}
-
-button {
-  cursor: pointer;
-}
-
 a {
-  color: inherit;
   text-decoration: none;
 }
 
-ul,
-ol {
-  list-style: none;
+h1,
+h2,
+h3,
+p {
+  margin: 0;
 }
 
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
+ul {
+  margin: 0;
+  padding-left: 0;
+  list-style-type: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+textarea {
+  outline: none;
+}
+.react-datepicker-popper[data-placement^="top"] .react-datepicker__triangle {
+  fill: #e32a2a;
+  color: #160303;
 }

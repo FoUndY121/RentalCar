@@ -1,0 +1,175 @@
+.card {
+  position: relative;
+  background: transparent;
+  border-radius: 14px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* .card:hover {
+  transform: translateY(-5px);
+} */
+
+.carImage {
+  width: 276px;
+  height: 268px;
+  object-fit: cover;
+  border-radius: 14px;
+}
+
+.info {
+  padding: 16px 0 28px 0;
+  text-align: left;
+  width: 100%;
+}
+.infoMainWrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-right: 6px;
+  margin-bottom: 8px;
+}
+.infoTitle,
+.price {
+  font-family: "Manrope", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.25;
+  color: var(--main);
+  span {
+    color: var(--button);
+  }
+}
+.infoAdress {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  margin-bottom: 4px;
+}
+.infoAdressCity,
+.infoAdressCountry,
+.infoAdressCompany,
+.infoAdressType,
+.infoAdressKm {
+  font-family: "Manrope", sans-serif;
+  position: relative;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.33333;
+  color: var(--gray);
+}
+.infoAdressCountry::before,
+.infoAdressCompany::before,
+.infoAdressKm::before {
+  content: "";
+  position: absolute;
+  left: -6px;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background-color: var(--gray);
+  transform: scaleY(1.1);
+}
+.infoAdress2 {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+}
+.readMore {
+  font-family: "Manrope", sans-serif;
+  display: block;
+  width: 100%;
+  padding: 12px 97px;
+  background-color: var(--button);
+  color: var(--white);
+  text-align: center;
+  text-decoration: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 250ms ease-in-out;
+}
+
+.readMore:hover {
+  background-color: var(--button-hover);
+}
+
+.favButton {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+}
+
+.favButton {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+}
+
+.dropWrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+}
+
+.drop {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background-color: #3470ff;
+  border-radius: 50%;
+  opacity: 0;
+  animation: dropAnim 0.6s ease-out forwards;
+}
+
+@keyframes dropAnim {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(var(--x), var(--y)) scale(0.3);
+    opacity: 0;
+  }
+}
+
+.drop0 {
+  --x: -40px;
+  --y: -40px;
+}
+.drop1 {
+  --x: 40px;
+  --y: -40px;
+}
+.drop2 {
+  --x: -40px;
+  --y: 40px;
+}
+.drop3 {
+  --x: 40px;
+  --y: 40px;
+}
+.drop4 {
+  --x: 0px;
+  --y: -25px;
+}
+.drop5 {
+  --x: 0px;
+  --y: 25px;
+}

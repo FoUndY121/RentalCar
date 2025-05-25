@@ -1,0 +1,118 @@
+.filter {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 56px;
+}
+.labelWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.label {
+  font-family: "Manrope", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.33333;
+  color: var(--gray);
+}
+.filter button {
+  font-family: "Manrope", sans-serif;
+  align-self: flex-end;
+  border: none;
+  padding: 12px 51px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.25;
+  cursor: pointer;
+  background-color: var(--button);
+  max-width: 156px;
+  height: 44px;
+  color: var(--white);
+  transition: all 250ms ease-in-out;
+}
+.filter button:hover {
+  background-color: var(--button-hover);
+}
+.filter input,
+.filter select {
+  font-family: "Manrope", sans-serif;
+  padding: 12px 16px;
+  height: 44px;
+  background: var(--inputs);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.25;
+  color: var(--main);
+}
+/* ................................. */
+.checkBrand {
+  width: 204px;
+  border: none;
+  border-radius: 12px;
+}
+
+.checkPrice {
+  width: 196px;
+  border: none;
+  border-radius: 12px;
+}
+/* .............................. */
+.iputWrap {
+  display: flex;
+}
+.inputFrom {
+  width: 160px;
+  border: transparent;
+  border-right: 1px solid var(--gray-light);
+  border-radius: 12px 0 0 12px;
+  color: var(--main);
+}
+.inputTo {
+  width: 160px;
+  border-radius: 0 12px 12px 0;
+  color: var(--main);
+  border: transparent;
+}
+.inputFrom::placeholder,
+.inputTo::placeholder {
+  color: var(--main);
+}
+
+.selectWrapper {
+  position: relative;
+  display: inline-block;
+  width: 204px;
+  transition: all 0.3s ease;
+}
+
+.selectWrapper::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  width: 16px;
+  height: 16px;
+  background-image: url("../../assets/favicon/chevron-down.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  pointer-events: none;
+  transform: translateY(-50%) rotate(180deg);
+  transition: transform 0.3s ease;
+}
+
+.selectWrapper.open::after {
+  transform: translateY(-50%) rotate(0deg);
+}
+
+.selectWrapper select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  padding-right: 40px;
+}
