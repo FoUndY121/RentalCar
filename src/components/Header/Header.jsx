@@ -25,6 +25,12 @@ const Header = () => {
             >
               Catalog
             </NavLink>
+            <NavLink
+              to="/favorites"
+              className={({ isActive }) => (isActive ? css.active : "")}
+            >
+              Favorites
+            </NavLink>
           </nav>
         </div>
       </div>

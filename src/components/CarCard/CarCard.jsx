@@ -9,12 +9,11 @@ import { useEffect, useState } from "react";
 const CarCard = ({ car }) => {
   const [animate, setAnimate] = useState(false);
 
-  // Сбросить анимацию после окончания
   useEffect(() => {
     if (animate) {
       const timer = setTimeout(() => {
         setAnimate(false);
-      }, 500); // длительность анимации в ms
+      }, 500);
 
       return () => clearTimeout(timer);
     }
@@ -47,7 +46,7 @@ const CarCard = ({ car }) => {
     if (animateDrops) {
       const timer = setTimeout(() => {
         setAnimateDrops(false);
-      }, 600); // соответствие длительности анимации
+      }, 600);
       return () => clearTimeout(timer);
     }
   }, [animateDrops]);

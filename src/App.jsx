@@ -1,12 +1,13 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import { ToastContainer } from "react-toastify"; // импортируем контейнер
-import "react-toastify/dist/ReactToastify.css"; // стили toasts
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 import Header from "./components/Header/Header";
 import Home from "./pages/Home";
 import Catalog from "./pages/Catalog";
 import CarDetails from "./pages/CarDetails";
 import NotFound from "./pages/NotFound";
+import FavoritesPage from "./pages/FavoritesPage";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/catalog" element={<Catalog />} />
         <Route path="/catalog/:id" element={<CarDetails />} />
+        <Route path="/favorites" element={<FavoritesPage />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>

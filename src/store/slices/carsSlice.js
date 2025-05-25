@@ -22,8 +22,8 @@ const carsSlice = createSlice({
     },
     setFilters: (state, action) => {
       state.filters = { ...state.filters, ...action.payload };
-      state.page = 1; // Скидаємо сторінку при зміні фільтрів
-      state.cars = []; // Скидаємо попередні результати
+      state.page = 1;
+      state.cars = [];
     },
     setPage: (state, action) => {
       state.page = action.payload;
